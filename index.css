@@ -1,0 +1,429 @@
+/* ----------------------------------------------------------
+   FONT — Plus Jakarta Sans: modern, clean, premium feel
+   Used by top-tier SaaS products and design portfolios
+---------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* ----------------------------------------------------------
+   GLOBAL RESET & BASE SETTINGS
+---------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #060818;
+  --card: #101320;
+  --accent: #4361ee;
+  --accent-soft: #152143;
+  --text-main: #ffffff;
+  --text-muted: #c2c6d3;
+  --border-soft: #1a1f36;
+}
+
+body {
+  background: #1a1d2e;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* ----------------------------------------------------------
+   SECTION BASE STYLE
+---------------------------------------------------------- */
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+/* ----------------------------------------------------------
+   NAVBAR
+---------------------------------------------------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(6, 8, 24, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  z-index: 100;
+  transition: 0.3s ease;
+}
+
+.logo {
+  color: var(--text-main);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------------------
+   HERO IMAGE
+---------------------------------------------------------- */
+.hero-img img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 30px auto;
+}
+
+/* ----------------------------------------------------------
+   HERO SECTION
+---------------------------------------------------------- */
+.hero {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.hero p {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.5px;
+}
+
+.hero .subtitle {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.hero .p2 {
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* ----------------------------------------------------------
+   HEADERS
+---------------------------------------------------------- */
+section h2 {
+  color: var(--text-main);
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  text-align: center;
+}
+
+section h1 {
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+/* ----------------------------------------------------------
+   SKILLS SECTION
+---------------------------------------------------------- */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skills .card {
+  padding: 10px 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skills .card i {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.skills .card:hover {
+  background-color: var(--accent-soft);
+}
+
+/* ----------------------------------------------------------
+   GENERAL CARD STYLE
+---------------------------------------------------------- */
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+/* ----------------------------------------------------------
+   JOURNEY SECTION
+---------------------------------------------------------- */
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.journey {
+  position: relative;
+  max-width: 900px;
+}
+
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding-left: 40px;
+  border-left: 2px solid var(--border-soft);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 25px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -10px;
+  top: 6px;
+  width: 15px;
+  height: 15px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent);
+}
+
+.timeline-content {
+  background: var(--card);
+  padding: 20px 25px;
+  border-radius: 12px;
+  border: 1px solid var(--border-soft);
+  transition: 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+.timeline-content:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 0 12px var(--accent-soft);
+}
+
+.timeline-content h3 {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin-bottom: 6px;
+}
+
+.timeline-date {
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.timeline-content p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .timeline { padding-left: 25px; }
+  .timeline-dot { left: -13px; }
+  .timeline-content { padding: 18px; }
+}
+
+/* ----------------------------------------------------------
+   CONTACT SECTION
+---------------------------------------------------------- */
+.contact p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  font-size: 2.2rem;
+  color: var(--text-main);
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  transform: scale(1.15);
+}
+
+/* ----------------------------------------------------------
+   FOOTER
+---------------------------------------------------------- */
+.footer {
+  text-align: center;
+  padding: 25px 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 400;
+  border-top: 1px solid var(--border-soft);
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+---------------------------------------------------------- */
+@media (max-width: 768px) {
+  .navbar { padding: 18px 20px; }
+  .nav-links { gap: 20px; }
+  .hero p { font-size: 1.7rem; }
+}
+
+@media (max-width: 500px) {
+  .nav-links { display: none; }
+}
+
+/* ================= MOVING GRADIENT + GRAIN ================= */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(60deg, hsla(225, 10%, 8%, 0.657), #363847, #0d1227, #1f2127);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  z-index: -2;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.png");
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+  animation: grainShift 0.8s steps(6) infinite;
+  z-index: -1;
+}
+
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes grainShift {
+  0%   { transform: translate(0,0); }
+  20%  { transform: translate(-10px, 5px); }
+  40%  { transform: translate(5px, -10px); }
+  60%  { transform: translate(-5px, 5px); }
+  80%  { transform: translate(10px, -5px); }
+  100% { transform: translate(0,0); }
+}
+
+.timeline-logo {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow:
+    0 0 10px var(--accent),
+    0 0 20px var(--accent),
+    0 0 30px var(--accent),
+    0 0 40px var(--accent);
+  transition: 0.3s ease;
+}
+
+.timeline-logo:hover {
+  box-shadow:
+    0 0 15px var(--accent),
+    0 0 30px var(--accent),
+    0 0 45px var(--accent),
+    0 0 60px var(--accent);
+  transform: scale(1.05);
+}
+
+.hero-img img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #8ab4ff;
+  box-shadow:
+    0 0 6px #8ab4ff,
+    0 0 12px #8ab4ff,
+    0 0 20px #8ab4ff;
+  transition: 0.3s ease;
+  display: block;
+  margin: 30px auto;
+}
+
+/* ----------------------------------------------------------
+   SCROLL REVEAL UTILITY
+---------------------------------------------------------- */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+
+.js-reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.js-reveal-ready .reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
